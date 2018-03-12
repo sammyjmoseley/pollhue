@@ -30,7 +30,7 @@ gulp.task('reactify', function() {
     b.transform(babelify, babelifyOpts);
     browserifyinc(b, {cacheFile: './.browserify-cache.json'});
     return b.bundle()
-        .pipe(source('bundle.js'))
+        .pipe(source('public/bundle.js'))
         .pipe(buffer())
         .pipe(replace('process.env.NODE_ENV', '"development"', replOptions))
         .pipe(sourcemaps.init({loadMaps: true}))
@@ -43,7 +43,7 @@ gulp.task('reactify-production', function() {
     b.transform(babelify, babelifyOpts);
     browserifyinc(b, {cacheFile: './.browserify-cache.json'});
     return b.bundle()
-        .pipe(source('bundle.js'))
+        .pipe(source('public/bundle.js'))
         .pipe(buffer())
         .pipe(replace('process.env.NODE_ENV', '"production"', replOptions))
         .pipe(sourcemaps.init({loadMaps: true}))

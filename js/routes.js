@@ -10,4 +10,4 @@ var initialItems = [
   {text: "Build A Better One"}
 ];
 
-React.render((<p>hello</p>), attachElement);
+React.render(<Root name={initialName}/>, attachElement);
