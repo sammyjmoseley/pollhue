@@ -181,7 +181,7 @@ var Dashboard = function (_React$Component) {
               { className: "waves-effect waves-light btn", onClick: function onClick() {
                   return _this2.vote.bind(_this2)(false);
                 } },
-              "I am understand :-)"
+              "I understand :-)"
             )
           ),
           _react2.default.createElement(

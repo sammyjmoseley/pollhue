@@ -59,7 +59,7 @@ export default class Dashboard extends React.Component {
           <PieChart data={[["Task","Hours per Day"],['u', this.state.num_understand], ['uu', this.state.num_misunderstand]]}/>
           <div className="row">
             <div className={"col s6"}>
-              <a className="waves-effect waves-light btn" onClick={() => this.vote.bind(this)(false)}>I am understand :-)</a>
+              <a className="waves-effect waves-light btn" onClick={() => this.vote.bind(this)(false)}>I understand :-)</a>
             </div>
 
             <div className={"col s6"}>
