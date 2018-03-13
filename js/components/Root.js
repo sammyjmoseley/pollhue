@@ -1,5 +1,4 @@
-import React from "react/addons";
-import List from "./List";
+import React from "react";
 
 export default class Root extends React.Component {
   render(){

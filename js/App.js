@@ -1,12 +1,12 @@
 require('./styles/styles.scss');
-import React from 'react/addons';
-import Root from './components/Root';
-import Materialize from 'materialize-css'
+import React from 'react';
 import $ from 'jquery';
 
 window.$ = $;
 // window.Materialize = require('react-materialize');
 window.Hammer = require('hammerjs');
+import Materialize from 'materialize-css'
+window.Materialize = Materialize;
 
 
 export default class App  extends React.Component {
