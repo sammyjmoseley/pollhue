@@ -1,4 +1,4 @@
-from flask import Response, render_template, jsonify, send_file, send_from_directory, Flask, session, request
+from flask import Response, render_template, jsonify, send_file, send_from_directory, Flask, session, request, redirect
 from flask_socketio import emit, SocketIO
 import os
 from flask_login import LoginManager, login_user, login_required, current_user, logout_user
@@ -22,6 +22,11 @@ user_votes = {}
 @login_manager.user_loader
 def load_user(user_id: int):
     return api.get_user(user_id=user_id)
+
+
+@login_manager.unauthorized_handler
+def unauthorized_callback():
+    return redirect("/login")
 
 
 @app.route("/user/login", methods=['POST'])
@@ -52,6 +57,7 @@ def login_page():
 
 
 @app.route("/dashboard")
+@login_required
 def dashboard():
     return send_file(os.path.join('..', 'public', 'index.html'))
 
