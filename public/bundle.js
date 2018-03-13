@@ -169,7 +169,7 @@ var Dashboard = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement(_PieChart2.default, { data: [["Task", "Hours per Day"], ['u', this.state.num_understand], ['uu', this.state.num_misunderstand]] }),
+        _react2.default.createElement(_PieChart2.default, { data: [["Task", "Hours per Day"], ['"I understand"', this.state.num_understand], ['"I do not understand"', this.state.num_misunderstand]] }),
         _react2.default.createElement(
           "div",
           { className: "row" },
