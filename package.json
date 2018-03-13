@@ -6,9 +6,9 @@
     "webpack": "webpack -d",
     "webpack-watch": "webpack --watch --colors",
     "dev": "webpack-dev-server --devtool eval --progress --colors --content-base public/ --port 8181"
+    "postinstall": "gulp"
   },
-  "author": "Liad Yosef",
-  "license": "MIT",
+  "author": "Sammy Moseley",
   "devDependencies": {
     "babel-eslint": "^7.1.0",
     "babel-jest": "^16.0.0",
