@@ -10,7 +10,6 @@ node_modules/
 public/js/
 .publish
 .idea/
-public/bundle.js*
 *.DS_Store
 *.browserify-cache.json
 package-lock.json 
