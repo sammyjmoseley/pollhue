@@ -45,7 +45,7 @@ export default class Login extends React.Component {
           <div>
             <div className="row">
               <div className={"col s12"}>
-                <h1>Login</h1>
+                <h3>Login</h3>
               </div>
             </div>
             <div className="row">

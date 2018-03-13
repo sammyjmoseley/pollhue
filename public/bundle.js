@@ -288,7 +288,7 @@ var Login = function (_React$Component) {
               "div",
               { className: "col s12" },
               _react2.default.createElement(
-                "h1",
+                "h3",
                 null,
                 "Login"
               )
@@ -427,9 +427,9 @@ var Root = function (_React$Component) {
             "div",
             { className: "col s12" },
             _react2.default.createElement(
-              "h1",
+              "h3",
               null,
-              "Hello World!"
+              "Polling Website"
             )
           )
         ),
@@ -441,8 +441,8 @@ var Root = function (_React$Component) {
             { className: "col s12" },
             _react2.default.createElement(
               "a",
-              { className: "waves-effect waves-light btn" },
-              "button"
+              { className: "waves-effect waves-light btn", href: '/login' },
+              "login"
             )
           )
         )
@@ -456,7 +456,7 @@ var Root = function (_React$Component) {
 exports.default = Root;
 ;
 
-},{"react":237}],6:[function(require,module,exports){
+},{"react":264}],6:[function(require,module,exports){
 'use strict';
 
 var _Root = require('./components/Root');
