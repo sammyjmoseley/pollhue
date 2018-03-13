@@ -1,13 +1,21 @@
+import Root from "./components/Root";
+
 require('./styles/styles.scss');
 import React from 'react/addons';
-import Root from './components/Root';
+import App from 'js/App';
+import {
+  Route,
+  Router,
+  browserHistory,
+  Redirect
+} from 'react-router'
+import Login from "./components/Login";
 
 var attachElement = document.getElementById('main');
-var initialName = "World";
-var initialItems = [
-  {text: "Build First React App", done: true},
-  {text: "Build One Yourself"},
-  {text: "Build A Better One"}
-];
 
-React.render(<Root name={initialName}/>, attachElement);
+React.render((<Router history={browserHistory}>
+  <Route component={App}>
+    <Route path={"/"} component={Root}/>
+    <Route path={"/login"} component={Login}/>
+  </Route>
+</Router>), attachElement);

@@ -1,16 +1,14 @@
 import React from "react/addons";
 import List from "./List";
 
-var Root = React.createClass({
-  mixins : [React.addons.PureRenderMixin],
-
-  render : function(){
+export default class Root extends React.Component {
+  render(){
 
     return (
         <div>
           <div className="row">
             <div className={"col s12"}>
-              <h1>Hello {this.props.name}!</h1>
+              <h1>Hello World!</h1>
             </div>
           </div>
           <div className="row">
@@ -20,6 +18,4 @@ var Root = React.createClass({
           </div>
         </div>)
   }
-});
-
-export default Root;
+};

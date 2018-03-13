@@ -2,8 +2,7 @@ from flask import Response, render_template, jsonify, send_file, send_from_direc
 from flask_socketio import emit, SocketIO
 import os
 from flask_login import LoginManager, login_user, login_required, current_user, logout_user
-from src.user import DefaultUserApi
-from hashlib import md5
+from user import DefaultUserApi
 
 api = DefaultUserApi()
 
@@ -11,7 +10,7 @@ app = Flask(__name__,
             static_url_path='',
             static_folder='../public/')
 
-app.secret_key = 'cshello'
+app.secret_key = 'CS4780 Secret Key'
 
 login_manager = LoginManager()
 
@@ -46,7 +45,12 @@ def logout():
 
 
 @app.route("/")
-def hello():
+def index():
+    return send_file(os.path.join('..', 'public', 'index.html'))
+
+
+@app.route("/login")
+def login():
     return send_file(os.path.join('..', 'public', 'index.html'))
 
 
